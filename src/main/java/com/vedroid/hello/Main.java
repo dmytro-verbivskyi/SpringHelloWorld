@@ -2,10 +2,8 @@ package com.vedroid.hello;
 
 public class Main {
     public static void main(String[] args) {
-        if (args.length > 0) {
-            System.out.println(args[0]);
-        } else {
-            System.out.println("hi");
-        }
+        IMessageRenderer mr = MessageSupportFactory.getInstance().getMessageRenderer();
+        mr.setMessageProvider(MessageSupportFactory.getInstance().getMessageProvider());
+        mr.render();
     }
 }
