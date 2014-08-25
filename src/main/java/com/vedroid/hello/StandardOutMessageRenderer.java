@@ -1,13 +1,13 @@
 package com.vedroid.hello;
 
-public class StandartOutMessageRenderer implements IMessageRenderer {
+public class StandardOutMessageRenderer implements IMessageRenderer {
     private IMessageProvider provider;
 
     @Override
     public void render() {
         if (provider == null) {
             String ex = "You must set property provider of class: " +
-                    StandartOutMessageRenderer.class.getName();
+                    StandardOutMessageRenderer.class.getName();
             throw new RuntimeException(ex);
         }
         System.out.println(provider.getMessage());
